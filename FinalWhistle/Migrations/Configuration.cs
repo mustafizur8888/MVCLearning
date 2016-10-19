@@ -1,3 +1,5 @@
+using FinalWhistle.Models;
+
 namespace FinalWhistle.Migrations
 {
     using System;
@@ -26,6 +28,27 @@ namespace FinalWhistle.Migrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
+
+
+            context.Teams.AddOrUpdate(
+              t => t.TeamName, new Team
+              {
+                  TeamName = "Tottenham Hotspur"
+              }
+              ,
+               new Team
+               {
+                   TeamName = "Manchester United"
+               },
+                new Team
+                {
+                    TeamName = "NewCastel Hotspur"
+                },
+                 new Team
+                 {
+                     TeamName = "Sunderland"
+                 }
+                );
         }
     }
 }

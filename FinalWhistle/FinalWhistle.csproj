@@ -125,22 +125,33 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\Images\background.jpg" />
     <Content Include="Content\Images\stadium.jpg" />
     <Content Include="Content\Images\stadium.png" />
     <Content Include="Content\Images\whistle.png" />
+    <Content Include="Content\Site.css" />
     <Content Include="Content\Styles\boxes.css" />
     <Content Include="Content\Styles\reset.css" />
     <Content Include="Content\Styles\site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="scripts\bootstrap.js" />
+    <Content Include="scripts\bootstrap.min.js" />
+    <None Include="scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="scripts\jquery-1.10.2.js" />
+    <Content Include="scripts\jquery-1.10.2.min.js" />
+    <Content Include="scripts\modernizr-2.6.2.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -164,9 +175,18 @@
     <Compile Include="Migrations\201610171956002_match report 5.Designer.cs">
       <DependentUpon>201610171956002_match report 5.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201610191353518_save team .cs" />
+    <Compile Include="Migrations\201610191353518_save team .Designer.cs">
+      <DependentUpon>201610191353518_save team .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201610191354128_save team 2.cs" />
+    <Compile Include="Migrations\201610191354128_save team 2.Designer.cs">
+      <DependentUpon>201610191354128_save team 2.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FWContext.cs" />
     <Compile Include="Models\Team.cs" />
+    <Compile Include="Models\TeamRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -179,6 +199,14 @@
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\_admin.cshtml" />
     <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="scripts\jquery-1.10.2.min.map" />
+    <Content Include="Views\Teams\Index.cshtml" />
+    <Content Include="Views\Teams\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -204,6 +232,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201610171956002_match report 5.resx">
       <DependentUpon>201610171956002_match report 5.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610191353518_save team .resx">
+      <DependentUpon>201610191353518_save team .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201610191354128_save team 2.resx">
+      <DependentUpon>201610191354128_save team 2.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

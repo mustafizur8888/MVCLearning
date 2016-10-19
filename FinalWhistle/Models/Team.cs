@@ -1,10 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-using System.Linq;
-using System.Security.AccessControl;
-using System.Web;
 
 namespace FinalWhistle.Models
 {
@@ -28,9 +24,6 @@ namespace FinalWhistle.Models
         public int HomePoints { get; set; }
         public int AwayPoints { get; set; }
         public DateTime Timestamp { get; set; }
-
-        
-
            
         [ForeignKey("HomeTeamId")]
         public Team HomeTeam { get; set; }
@@ -43,9 +36,7 @@ namespace FinalWhistle.Models
     public class MatchReport
     {
         public int Id { get; set; }
-
         public string Content { get; set; }
-
         public int MatchId { get; set; }
         [ForeignKey("MatchId")]
         public Match Match { get; set; }

@@ -1,0 +1,19 @@
+﻿@model IEnumerable<FinalWhistle.Models.Team>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_admin.cshtml";
+}
+
+<h1>My Teams</h1>
+
+<table>
+    <tr>
+        <th>Team Name</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.TeamName</td>
+        </tr>
+    }
+</table>

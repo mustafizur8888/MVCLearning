@@ -29,17 +29,14 @@ namespace FinalWhistle.Controllers
         {
             if (!string.IsNullOrWhiteSpace(team.TeamName))
             {
-
-
-
                 var context = new FWContext();
                 var queryable = context.Teams.AsQueryable().Where(t => t.TeamName.ToLower() == team.TeamName.ToLower());
                 var any = queryable.ToList().Count;
 
                 //checik team name is alreay use
-                if (any>0)
+                if (any > 0)
                 {
-                    ModelState.AddModelError("TeamName","Name is already use");
+                    ModelState.AddModelError("TeamName", "Name is already use");
                 }
                 else
                 {

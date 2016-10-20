@@ -1,0 +1,34 @@
+﻿@model FinalWhistle.Models.MatchViewModel
+@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/_admin.cshtml";
+}
+
+<h1>Add Match</h1>
+
+@using (Html.BeginForm())
+{
+
+    @Html.LabelFor(m => m.HomTeams)
+    @Html.DropDownListFor(m => m.HomeTeamId, new SelectList(Model.HomTeams, "TeamId", "TeamName"))
+    <br />
+
+    @Html.LabelFor(m => m.AwayTeams)
+    @Html.DropDownListFor(m => m.AwayTeamId, new SelectList(Model.AwayTeams, "TeamId", "TeamName"))
+    <br />
+
+
+    @Html.LabelFor(m => m.HomePoints)
+    @Html.TextBoxFor(m => m.HomePoints)
+    <br />
+    @Html.LabelFor(m => m.AwayPoints)
+    @Html.TextBoxFor(m => m.AwayPoints)
+
+    <br />
+
+    @Html.LabelFor(l => l.Timestamp)
+    @Html.TextBoxFor(m => m.Timestamp, "{0:d MMM yyyy}")
+
+    @Html.HiddenFor(m => m.MatchId)
+    <input type="submit" value="Save" />
+}

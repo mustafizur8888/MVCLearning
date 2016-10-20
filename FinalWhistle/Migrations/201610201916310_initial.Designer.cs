@@ -7,13 +7,13 @@ namespace FinalWhistle.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.1.3-40302")]
-    public sealed partial class matchreport2 : IMigrationMetadata
+    public sealed partial class initial : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(matchreport2));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(initial));
         
         string IMigrationMetadata.Id
         {
-            get { return "201610171947335_match report 2"; }
+            get { return "201610201916310_initial"; }
         }
         
         string IMigrationMetadata.Source

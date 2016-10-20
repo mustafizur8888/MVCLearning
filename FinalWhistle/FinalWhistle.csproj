@@ -151,40 +151,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\MatchesController.cs" />
+    <Compile Include="Migrations\201610201916310_initial.cs" />
+    <Compile Include="Migrations\201610201916310_initial.Designer.cs">
+      <DependentUpon>201610201916310_initial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\MatchViewModel.cs" />
     <Compile Include="Controllers\TeamsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201610171942187_initial.cs" />
-    <Compile Include="Migrations\201610171942187_initial.Designer.cs">
-      <DependentUpon>201610171942187_initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610171947335_match report 2.cs" />
-    <Compile Include="Migrations\201610171947335_match report 2.Designer.cs">
-      <DependentUpon>201610171947335_match report 2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610171951518_match report 3.cs" />
-    <Compile Include="Migrations\201610171951518_match report 3.Designer.cs">
-      <DependentUpon>201610171951518_match report 3.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610171954171_match report 4.cs" />
-    <Compile Include="Migrations\201610171954171_match report 4.Designer.cs">
-      <DependentUpon>201610171954171_match report 4.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610171956002_match report 5.cs" />
-    <Compile Include="Migrations\201610171956002_match report 5.Designer.cs">
-      <DependentUpon>201610171956002_match report 5.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610191353518_save team .cs" />
-    <Compile Include="Migrations\201610191353518_save team .Designer.cs">
-      <DependentUpon>201610191353518_save team .cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201610191354128_save team 2.cs" />
-    <Compile Include="Migrations\201610191354128_save team 2.Designer.cs">
-      <DependentUpon>201610191354128_save team 2.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\FWContext.cs" />
+    <Compile Include="Models\MatchRepository.cs" />
     <Compile Include="Models\Team.cs" />
     <Compile Include="Models\TeamRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -207,6 +186,8 @@
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Teams\Index.cshtml" />
     <Content Include="Views\Teams\Add.cshtml" />
+    <Content Include="Views\Matches\Index.cshtml" />
+    <Content Include="Views\Matches\Add.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -218,26 +199,8 @@
     <Folder Include="App_Data\" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201610171942187_initial.resx">
-      <DependentUpon>201610171942187_initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610171947335_match report 2.resx">
-      <DependentUpon>201610171947335_match report 2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610171951518_match report 3.resx">
-      <DependentUpon>201610171951518_match report 3.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610171954171_match report 4.resx">
-      <DependentUpon>201610171954171_match report 4.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610171956002_match report 5.resx">
-      <DependentUpon>201610171956002_match report 5.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610191353518_save team .resx">
-      <DependentUpon>201610191353518_save team .cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201610191354128_save team 2.resx">
-      <DependentUpon>201610191354128_save team 2.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201610201916310_initial.resx">
+      <DependentUpon>201610201916310_initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

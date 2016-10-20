@@ -1,4 +1,5 @@
-﻿using System.Data.Entity;
+﻿using System.ComponentModel.DataAnnotations.Schema;
+using System.Data.Entity;
 using FinalWhistle.Models;
 
 public class FWContext : DbContext
@@ -10,9 +11,15 @@ public class FWContext : DbContext
 
     public DbSet<Team> Teams { get; set; }
     public DbSet<MatchReport> TeamsMatchReports { get; set; }
+    public DbSet<Match> Matches { get; set; }
 
     protected override void OnModelCreating(DbModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Match>()
+            .Property(m => m.MatchId)
+            .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+
+
         modelBuilder.Entity<Match>().
             HasRequired(m => m.HomeTeam).
             WithMany(t => t.HomeMatches)

@@ -1,0 +1,36 @@
+﻿@model IEnumerable<FinalWhistle.Models.Match>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/_admin.cshtml";
+}
+
+<h1>Match</h1>
+<h1>@Html.ActionLink("Add","Add")</h1>
+
+@if (Model.Any())
+{
+    <table>
+        <tr>
+            <th>Home Team</th>
+            <th>Away Team</th>
+            <th>Result</th>
+            <th>Date</th>
+        </tr>
+        @foreach (var match in Model)
+        {
+            <tr>
+                <td>@match.HomeTeam.TeamName</td>
+                <td>@match.AwayTeam.TeamName</td>
+                <td>@match.HomePoints - @match.AwayPoints</td>
+                <td>@match.Timestamp.ToShortDateString()</td>
+            </tr>
+        }
+
+
+    </table>
+}
+else
+{
+    <p>No Match found</p>
+}
+

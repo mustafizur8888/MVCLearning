@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
 namespace FinalWhistle.Models
@@ -17,6 +18,7 @@ namespace FinalWhistle.Models
 
     public class Match
     {
+        [Key]
         public int MatchId { get; set; }
 
         public int HomeTeamId { get; set; }
@@ -26,9 +28,9 @@ namespace FinalWhistle.Models
         public DateTime Timestamp { get; set; }
            
         [ForeignKey("HomeTeamId")]
-        public Team HomeTeam { get; set; }
+        public virtual Team HomeTeam { get; set; }
         [ForeignKey("AwayTeamId")]
-        public Team AwayTeam { get; set; }
+        public virtual Team AwayTeam { get; set; }
 
         
     }
